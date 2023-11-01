@@ -35,7 +35,7 @@ public class TweetsProvider
 
   public async Task<bool> CreateTweetsStream(string streamName, string topicName)
   {
-    var ksql = $"CREATE OR REPLACE STREAM {streamName}(id INT, message VARCHAR, isRobot BOOLEAN, amount DOUBLE, accountBalance DECIMAL(16,4))\r\n  WITH (kafka_topic='{topicName}', value_format='json', partitions=1);";
+    var ksql = $"CREATE OR REPLACE STREAM {streamName}(id INT, message VARCHAR, isRobot BOOLEAN, amount DOUBLE, accountBalance DECIMAL(16,4))\n  WITH (kafka_topic='{topicName}', value_format='json', partitions=1);";
       
     KSqlDbStatement ksqlDbStatement = new(ksql);
 

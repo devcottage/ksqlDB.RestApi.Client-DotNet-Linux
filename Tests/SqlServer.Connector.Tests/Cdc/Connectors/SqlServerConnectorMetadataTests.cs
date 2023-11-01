@@ -14,7 +14,7 @@ public class SqlServerConnectorMetadataTests : TestBase<SqlServerConnectorMetada
     base.TestInitialize();
 
     string connectionString =
-      "Server=127.0.0.1,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+      "Server=127.0.0.1,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
 
     ClassUnderTest = new SqlServerConnectorMetadata(connectionString);
   }
@@ -83,7 +83,7 @@ public class SqlServerConnectorMetadataTests : TestBase<SqlServerConnectorMetada
     //Act
 
     //Assert
-    ClassUnderTest.DatabasePassword.Should().Be("<YourNewStrong@Passw0rd>");
+    ClassUnderTest.DatabasePassword.Should().Be("Pa55-w0rd");
   }
 
   [TestMethod]

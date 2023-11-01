@@ -36,7 +36,7 @@ CREATE SOURCE CONNECTOR MSSQL_SENSORS WITH (
   'database.hostname'= 'sqlserver2019', 
   'database.port'= '1433', 
   'database.user'= 'sa', 
-  'database.password'= '<YourNewStrong@Passw0rd>', 
+  'database.password'= 'Pa55-w0rd', 
   'database.dbname'= 'Sensors', 
   'database.server.name'= 'sqlserver2019', 
   'table.include.list'= 'dbo.Sensors',

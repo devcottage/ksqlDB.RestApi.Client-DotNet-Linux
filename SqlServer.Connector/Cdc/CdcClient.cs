@@ -150,7 +150,7 @@ namespace SqlServer.Connector.Cdc
     /// <returns></returns>
     public Task<bool> IsCdcDbEnabledAsync(string databaseName)
     {
-      return ExecuteScalarAsync($"SELECT COUNT(*) FROM sys.databases\r\nWHERE is_cdc_enabled = 1 AND name = '{databaseName}'");
+      return ExecuteScalarAsync($"SELECT COUNT(*) FROM sys.databases\nWHERE is_cdc_enabled = 1 AND name = '{databaseName}'");
     }
 
     /// <summary>

@@ -100,7 +100,7 @@ public class JsonArrayParserTests : TestBase
     var json = ClassUnderTest.CreateJson(headerColumns, row);
 
     //Assert
-    json.Should().BeEquivalentTo("{\r\n\"Value\": 1\r\n,\"Arr\": [[1,2],[3,4]]\r\n}\r\n");
+    json.Should().BeEquivalentTo("{\n\"Value\": 1\n,\"Arr\": [[1,2],[3,4]]\n}\n");
   }
 
   [Test]
@@ -115,7 +115,7 @@ public class JsonArrayParserTests : TestBase
     var json = ClassUnderTest.CreateJson(headerColumns, row);
 
     //Assert
-    json.Should().BeEquivalentTo("{\r\n\"Value\": 1\r\n,\"Arr\": [{\"a\":1,\"b\":2},{\"d\":4,\"c\":3}]\r\n}\r\n");
+    json.Should().BeEquivalentTo("{\n\"Value\": 1\n,\"Arr\": [{\"a\":1,\"b\":2},{\"d\":4,\"c\":3}]\n}\n");
   }
 
   [Test]
@@ -130,7 +130,7 @@ public class JsonArrayParserTests : TestBase
     var json = ClassUnderTest.CreateJson(headerColumns, row);
 
     //Assert
-    json.Should().BeEquivalentTo("{\r\n\"Value\": 1\r\n,\"Map\": {\"a\":{\"a\":1,\"b\":2},\"b\":{\"d\":4,\"c\":3}}\r\n}\r\n");
+    json.Should().BeEquivalentTo("{\n\"Value\": 1\n,\"Map\": {\"a\":{\"a\":1,\"b\":2},\"b\":{\"d\":4,\"c\":3}}\n}\n");
   }
 
   [Test]
@@ -204,7 +204,7 @@ public class JsonArrayParserTests : TestBase
     var json = ClassUnderTest.CreateJson(headerColumns, row);
 
     //Assert
-    string expectedJson = JObject.Parse("{\r\n\"INTERNALID\": \"7775dee282f011724d3108f25302b999\"\r\n,\"FILENAME\": \"test.json\"\r\n,\"TYPE\": \"Monitor\"\r\n,\"NAME\": \"27\\\" XZ272UVBMIIPHX Black\"\r\n}").ToString();
+    string expectedJson = JObject.Parse("{\n\"INTERNALID\": \"7775dee282f011724d3108f25302b999\"\n,\"FILENAME\": \"test.json\"\n,\"TYPE\": \"Monitor\"\n,\"NAME\": \"27\\\" XZ272UVBMIIPHX Black\"\n}").ToString();
     JObject.Parse(json).ToString().Should().BeEquivalentTo(expectedJson);
   }
 

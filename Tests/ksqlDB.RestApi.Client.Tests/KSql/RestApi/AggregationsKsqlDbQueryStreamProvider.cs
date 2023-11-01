@@ -8,6 +8,6 @@ internal class AggregationsKsqlDbQueryStreamProvider : TestableKSqlDbQueryStream
     : base(httpClientFactory)
   {
     QueryResponse =
-      "{\"queryId\":\"cadfd47e-748d-44a5-9c25-0e88e2f57875\",\"columnNames\":[\"KSQL_COL_0\"],\"columnTypes\":[\"BIGINT\"]}\r\n[0]\r\n[1]";
+      "{\"queryId\":\"cadfd47e-748d-44a5-9c25-0e88e2f57875\",\"columnNames\":[\"KSQL_COL_0\"],\"columnTypes\":[\"BIGINT\"]}\n[0]\n[1]";
   }
 }

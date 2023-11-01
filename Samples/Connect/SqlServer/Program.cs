@@ -30,7 +30,7 @@ namespace Connect.SqlServer
       Console.WriteLine(message);
     }
 
-    static readonly string ConnectionString = @"Server=sqlserver2019,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+    static readonly string ConnectionString = @"Server=sqlserver2019,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
     static readonly string BootstrapServers = "localhost:29092";
     static readonly string TableName = "Sensors";
     static readonly string SchemaName = "dbo";

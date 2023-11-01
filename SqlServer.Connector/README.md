@@ -55,7 +55,7 @@ using SqlServer.Connector.Cdc.Extensions;
 
 class Program
 {
-  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
 
   static string bootstrapServers = "localhost:29092";
   static string KsqlDbUrl => @"http://localhost:8088";
@@ -302,7 +302,7 @@ CREATE SOURCE CONNECTOR MSSQL_SENSORS_CONNECTOR WITH (
   'database.port'= '1433', 
   'database.hostname'= '127.0.0.1', 
   'database.user'= 'SA', 
-  'database.password'= '<YourNewStrong@Passw0rd>', 
+  'database.password'= 'Pa55-w0rd', 
   'database.dbname'= 'Sensors', 
   'key.converter'= 'org.apache.kafka.connect.json.JsonConverter', 
   'value.converter'= 'org.apache.kafka.connect.json.JsonConverter', 
@@ -472,7 +472,7 @@ using SqlServer.Connector.Cdc.Extensions;
 
 class Program
 {
-  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
 
   static string bootstrapServers = "localhost:29092";
   static string KsqlDbUrl => @"http://localhost:8088";

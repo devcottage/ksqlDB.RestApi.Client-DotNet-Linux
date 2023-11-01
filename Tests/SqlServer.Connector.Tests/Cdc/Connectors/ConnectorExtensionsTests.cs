@@ -11,7 +11,7 @@ public class ConnectorExtensionsTests : TestBase
   private SqlServerConnectorMetadata CreateConnector()
   {
     string connectionString =
-      "Server=127.0.0.1,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+      "Server=127.0.0.1,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
 
     return new SqlServerConnectorMetadata(connectionString);
   }
@@ -65,7 +65,7 @@ public class ConnectorExtensionsTests : TestBase
 	'database.port'= '1433', 
 	'database.hostname'= '127.0.0.1', 
 	'database.user'= 'SA', 
-	'database.password'= '<YourNewStrong@Passw0rd>', 
+	'database.password'= 'Pa55-w0rd', 
 	'database.dbname'= 'Sensors'
 );
 ";

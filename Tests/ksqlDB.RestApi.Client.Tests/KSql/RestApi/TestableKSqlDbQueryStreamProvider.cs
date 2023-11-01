@@ -24,7 +24,7 @@ internal class TestableKSqlDbQueryStreamProvider : KSqlDbQueryStreamProvider
 [1611327671476,""Wall-e"",2,false,1.2000,1.0]";
 
   protected string ErrorResponse =
-    @"{""@type"":""generic_error"",""error_code"":40001,""message"":""Line: 1, Col: 21: SELECT column 'Foo' cannot be resolved.\nStatement: SELECT Message, Id, Foo FROM Tweets\r\nWHERE Message = 'Hello world' EMIT CHANGES LIMIT 2;""}";
+    @"{""@type"":""generic_error"",""error_code"":40001,""message"":""Line: 1, Col: 21: SELECT column 'Foo' cannot be resolved.\nStatement: SELECT Message, Id, Foo FROM Tweets\nWHERE Message = 'Hello world' EMIT CHANGES LIMIT 2;""}";
 
   internal IsDisposedHttpClient LastUsedHttpClient { get; private set; } = null!;
 

@@ -31,7 +31,7 @@ using SqlServer.Connector.Cdc;
 
 class Program
 {
-  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true";
+  static string connectionString = @"Server=127.0.0.1,1433;User Id = SA;Password=Pa55-w0rd;Initial Catalog = Sensors;MultipleActiveResultSets=true";
 
   static string bootstrapServers = "localhost:29092";
   static string KsqlDbUrl => @"http://localhost:8088";

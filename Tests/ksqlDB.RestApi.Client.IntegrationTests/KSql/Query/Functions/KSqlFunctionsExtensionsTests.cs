@@ -447,7 +447,7 @@ public class KSqlFunctionsExtensionsTests : Infrastructure.IntegrationTests
     int expectedItemsCount = 1;
 
     string json =
-      "{\r\n   \"log\": {\r\n      \"cloud\": \"gcp836Csd\",\r\n      \"app\": \"ksProcessor\",\r\n      \"instance\": 4\r\n   }\r\n}";
+      "{\n   \"log\": {\n      \"cloud\": \"gcp836Csd\",\n      \"app\": \"ksProcessor\",\n      \"instance\": 4\n   }\n}";
 
     string jsonPath = "$.log.cloud";
 

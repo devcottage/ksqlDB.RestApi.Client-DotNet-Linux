@@ -16,7 +16,7 @@ services:
       - kafkanetwork
     environment:
       - "ACCEPT_EULA=Y"
-      - "SA_PASSWORD=<YourNewStrong@Passw0rd>"
+      - "SA_PASSWORD=Pa55-w0rd"
       - "MSSQL_AGENT_ENABLED=True"
     volumes:
       - sqlserver2019data:/var/opt/mssql
@@ -130,16 +130,3 @@ services:
     entrypoint: /bin/sh
     tty: true
 
-  blazor.sample:
-    image: ${DOCKER_REGISTRY-}blazorsample
-    build:
-      context: .
-      dockerfile: Samples/Blazor.Sample/Dockerfile
-    networks: 
-      - kafkanetwork
-    environment:
-      ksqlDb__Url: "http://ksqldb-server:8088"
-      ConnectionStrings__DefaultConnection: "Server=sqlserver2019,1433;User Id = SA;Password=<YourNewStrong@Passw0rd>;Initial Catalog = Sensors;MultipleActiveResultSets=true"
-    depends_on:
-      ksqldb-server:
-        condition: service_healthy
